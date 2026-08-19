@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SyF Construcciones — Arquitectura integral</title>
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+<meta name="description" content="Estudio de arquitectura y construcción. Arquitectura integral, proyectos, ejecución de obras y gestión de trámites municipales.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="grid-texture" aria-hidden="true"></div>
+<div class="blueprint-frame" aria-hidden="true">
+  <span class="corner corner-tl"></span>
+  <span class="corner corner-tr"></span>
+  <span class="corner corner-bl"></span>
+  <span class="corner corner-br"></span>
+</div>
+
+<header id="site-header">
+  <div class="nav">
+    <a href="#top" class="brand">
+      <img src="logo.png" alt="Logo SyF Construcciones" width="64" height="64">
+      <span class="brand-stack">
+        <span class="brand-line1 mono">SyF Construcciones</span>
+        <span class="brand-line2 mono">Estudio de arquitectura</span>
+      </span>
+    </a>
+
+    <nav class="links" id="nav-links">
+      <a href="#servicios" class="nav-link">Servicios</a>
+      <a href="#proceso" class="nav-link">Proceso</a>
+      <a href="#portfolio" class="nav-link">Portfolio</a>
+      <a href="#renders" class="nav-link">Renders</a>
+      <a href="#testimonios" class="nav-link">Testimonios</a>
+    </nav>
+
+    <div class="nav-right">
+      <a href="#contacto" class="nav-cta">Contáctanos</a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-media" aria-hidden="true">
+      <img src="hero.jpg" alt="" loading="eager" id="hero-photo">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-wrap">
+      <div class="hero-inner reveal">
+        <span class="accent-dash" aria-hidden="true"></span>
+        <h1>Arquitectura<br><span class="accent-italic">integral,</span><br>de la idea a la obra.</h1>
+        <p class="lede">Proyectamos, construimos y gestionamos cada etapa de tu obra: diseño, ejecución y trámites municipales, con un solo equipo responsable de principio a fin.</p>
+        <div class="hero-actions">
+          <a href="#portfolio" class="btn btn-primary">
+            <span>Ver proyectos</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#contacto" class="btn btn-ghost">Contactanos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="servicios">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Un equipo, todas las etapas de la obra.</h2>
+        <p class="section-desc">Acompañamos el proyecto de forma integral para que no tengas que coordinar distintos proveedores en cada etapa.</p>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="1.4"/><path d="M20 11l4.5 12.5L12 20l8-9z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><circle cx="20" cy="20" r="1.6" fill="currentColor"/></svg>
+          </div>
+          <h3>Arquitectura integral</h3>
+          <p>Diseño, cálculo y coordinación de todas las disciplinas de tu proyecto bajo una misma dirección.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 40 40" fill="none"><rect x="9" y="9" width="22" height="22" stroke="currentColor" stroke-width="1.4"/><path d="M9 16h22M16 9v22" stroke="currentColor" stroke-width="1.4"/><circle cx="24" cy="24" r="2" stroke="currentColor" stroke-width="1.4"/></svg>
+          </div>
+          <h3>Proyecto</h3>
+          <p>Anteproyecto, proyecto ejecutivo y documentación técnica lista para construir.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 40 40" fill="none"><path d="M10 30V16l7-4 7 4v14" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M24 30V13l6-3v20" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M7 30h26" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Ejecución de obra</h3>
+          <p>Dirección y gestión de obra en sitio, con seguimiento de plazos, costos y calidad.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 40 40" fill="none"><rect x="11" y="8" width="18" height="24" rx="1" stroke="currentColor" stroke-width="1.4"/><path d="M15 15h10M15 20h10M15 25h6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><circle cx="26" cy="27" r="4" stroke="currentColor" stroke-width="1.4"/><path d="M24.6 27l1 1 2-2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Trámites municipales</h3>
+          <p>Presentación y seguimiento de trámites ante la Intendencia y demás organismos.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="proceso">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Cómo trabajamos.</h2>
+        <p class="section-desc">Un recorrido claro desde la primera consulta hasta la entrega de la obra.</p>
+      </div>
+
+      <ol class="process-list">
+        <li class="process-step reveal">
+          <div class="process-num mono">01</div>
+          <div class="process-body">
+            <h3>Consulta inicial</h3>
+            <p>Relevamos el terreno o el espacio, tus necesidades y el presupuesto disponible.</p>
+          </div>
+        </li>
+        <li class="process-step reveal">
+          <div class="process-num mono">02</div>
+          <div class="process-body">
+            <h3>Proyecto y diseño</h3>
+            <p>Desarrollamos el anteproyecto y luego el proyecto ejecutivo, con planos y documentación técnica.</p>
+          </div>
+        </li>
+        <li class="process-step reveal">
+          <div class="process-num mono">03</div>
+          <div class="process-body">
+            <h3>Trámites y permisos</h3>
+            <p>Gestionamos la aprobación municipal y demás permisos necesarios para habilitar la obra.</p>
+          </div>
+        </li>
+        <li class="process-step reveal">
+          <div class="process-num mono">04</div>
+          <div class="process-body">
+            <h3>Ejecución de obra</h3>
+            <p>Construimos con seguimiento constante, hasta la entrega final de la obra terminada.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="portfolio">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Obras y proyectos.</h2>
+        <p class="section-desc">Una muestra de nuestros trabajos recientes.</p>
+      </div>
+
+      <div class="portfolio-grid">
+        <figure class="project-slot reveal">
+          <div class="slot-inner"><img src="img/1.jpg" alt="Proyecto SyF Construcciones 01" loading="lazy"></div>
+          <figcaption>
+            <p class="mono">Proyecto 01</p>
+            <p class="cap-desc">Nombre del proyecto, ubicación</p>
+          </figcaption>
+        </figure>
+
+        <figure class="project-slot reveal">
+          <div class="slot-inner"><img src="img/2.jpg" alt="Proyecto SyF Construcciones 02" loading="lazy"></div>
+          <figcaption>
+            <p class="mono">Proyecto 02</p>
+            <p class="cap-desc">Nombre del proyecto, ubicación</p>
+          </figcaption>
+        </figure>
+
+        <figure class="project-slot reveal">
+          <div class="slot-inner"><img src="img/3.jpg" alt="Proyecto SyF Construcciones 03" loading="lazy"></div>
+          <figcaption>
+            <p class="mono">Proyecto 03</p>
+            <p class="cap-desc">Nombre del proyecto, ubicación</p>
+          </figcaption>
+        </figure>
+
+        <figure class="project-slot reveal">
+          <div class="slot-inner"><img src="img/4.jpg" alt="Proyecto SyF Construcciones 04" loading="lazy"></div>
+          <figcaption>
+            <p class="mono">Proyecto 04</p>
+            <p class="cap-desc">Nombre del proyecto, ubicación</p>
+          </figcaption>
+        </figure>
+
+        <figure class="project-slot reveal">
+          <div class="slot-inner"><img src="img/5.jpg" alt="Proyecto SyF Construcciones 05" loading="lazy"></div>
+          <figcaption>
+            <p class="mono">Proyecto 05</p>
+            <p class="cap-desc">Nombre del proyecto, ubicación</p>
+          </figcaption>
+        </figure>
+
+        <figure class="project-slot reveal">
+          <div class="slot-inner"><img src="img/6.jpg" alt="Proyecto SyF Construcciones 06" loading="lazy"></div>
+          <figcaption>
+            <p class="mono">Proyecto 06</p>
+            <p class="cap-desc">Nombre del proyecto, ubicación</p>
+          </figcaption>
+        </figure>
+
+        <figure class="project-slot reveal">
+          <div class="slot-inner"><img src="img/7.jpg" alt="Proyecto SyF Construcciones 07" loading="lazy"></div>
+          <figcaption>
+            <p class="mono">Proyecto 07</p>
+            <p class="cap-desc">Nombre del proyecto, ubicación</p>
+          </figcaption>
+        </figure>
+
+        <figure class="project-slot reveal">
+          <div class="slot-inner"><img src="img/8.jpg" alt="Proyecto SyF Construcciones 08" loading="lazy"></div>
+          <figcaption>
+            <p class="mono">Proyecto 08</p>
+            <p class="cap-desc">Nombre del proyecto, ubicación</p>
+          </figcaption>
+        </figure>
+
+        <figure class="project-slot reveal">
+          <div class="slot-inner"><img src="img/9.jpg" alt="Proyecto SyF Construcciones 09" loading="lazy"></div>
+          <figcaption>
+            <p class="mono">Proyecto 09</p>
+            <p class="cap-desc">Nombre del proyecto, ubicación</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="renders">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Renders y avances.</h2>
+        <p class="section-desc">Fotos y videos de nuestros proyectos en distintas etapas — reemplazá cada bloque con tu propio material.</p>
+      </div>
+
+      <div class="renders-grid">
+        <figure class="render-slot reveal">
+          <div class="render-inner"><img src="img/render1.png" alt="Render SyF Construcciones 01" loading="lazy"></div>
+          <figcaption><p class="mono">Render 01</p></figcaption>
+        </figure>
+
+        <figure class="render-slot reveal">
+          <div class="render-inner"><img src="img/render2.png" alt="Render SyF Construcciones 02" loading="lazy"></div>
+          <figcaption><p class="mono">Render 02</p></figcaption>
+        </figure>
+
+        <figure class="render-slot reveal">
+          <div class="render-inner"><img src="img/render3.png" alt="Render SyF Construcciones 03" loading="lazy"></div>
+          <figcaption><p class="mono">Render 03</p></figcaption>
+        </figure>
+
+        <figure class="render-slot render-slot-video reveal">
+          <div class="render-inner">
+            <iframe src="https://www.youtube.com/embed/D0MRFQo9YAQ" title="SyF Construcciones — Video 01" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <figcaption><p class="mono">Video 01</p></figcaption>
+        </figure>
+
+        <figure class="render-slot render-slot-video reveal">
+          <div class="render-inner">
+            <iframe src="https://www.youtube.com/embed/HYRHYQYDxQg" title="SyF Construcciones — Video 02" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <figcaption><p class="mono">Video 02</p></figcaption>
+        </figure>
+
+        <figure class="render-slot render-slot-video reveal">
+          <div class="render-inner">
+            <iframe src="https://www.youtube.com/embed/EuzHcYMcros" title="SyF Construcciones — Video 03" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <figcaption><p class="mono">Video 03</p></figcaption>
+        </figure>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="section section-alt" id="testimonios">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Lo que dicen nuestros clientes.</h2>
+        <p class="section-desc">Textos de ejemplo — reemplazalos por comentarios reales de tus clientes.</p>
+      </div>
+
+      <div class="testimonial-grid">
+        <blockquote class="testimonial reveal">
+          <p class="quote-mark" aria-hidden="true">&ldquo;</p>
+          <p class="quote">El equipo de SyF acompañó todo el proceso, desde el proyecto hasta el último trámite. Cero sorpresas.</p>
+          <footer class="who">
+            <strong>Nombre Apellido</strong>
+            <span>Vivienda unifamiliar</span>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testimonial reveal">
+          <p class="quote-mark" aria-hidden="true">&ldquo;</p>
+          <p class="quote">Manejaron los tiempos de obra y los permisos municipales sin que tuviéramos que ocuparnos de nada.</p>
+          <footer class="who">
+            <strong>Nombre Apellido</strong>
+            <span>Reforma comercial</span>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testimonial reveal">
+          <p class="quote-mark" aria-hidden="true">&ldquo;</p>
+          <p class="quote">Buena comunicación durante toda la obra y un resultado final que superó lo que teníamos en mente.</p>
+          <footer class="who">
+            <strong>Nombre Apellido</strong>
+            <span>Ampliación</span>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contacto">
+    <div class="wrap">
+      <div class="contact reveal">
+        <div class="contact-info">
+          <h2>Contanos sobre tu proyecto.</h2>
+          <p class="section-desc light">Escribinos o llamanos y coordinamos una primera consulta sin costo.</p>
+          <div class="contact-links">
+            <a href="mailto:eduardo@syfconstrucciones.com">
+              <span class="mono">Email</span>
+              <span class="contact-value">eduardo@syfconstrucciones.com</span>
+            </a>
+            <a href="https://wa.me/59894427990">
+              <span class="mono">WhatsApp</span>
+              <span class="contact-value">094 427 990</span>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contact-form" novalidate>
+          <label for="name">Nombre</label>
+          <input id="name" name="name" type="text" placeholder="Tu nombre" required>
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="tu@email.com" required>
+
+          <label for="msg">Contanos sobre tu proyecto</label>
+          <textarea id="msg" name="msg" placeholder="Tipo de obra, ubicación, plazos..." required></textarea>
+
+          <button type="submit">
+            <span>Enviar consulta</span>
+          </button>
+          <p class="form-note" id="form-note" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Cerrar">
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 4l14 14M18 4L4 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+  </button>
+  <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Anterior">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M12.5 4l-6 6 6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Siguiente">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 4l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <figure class="lightbox-content">
+    <img src="" alt="" id="lightbox-img">
+    <figcaption id="lightbox-caption"></figcaption>
+  </figure>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p class="mono">SyF Construcciones — Montevideo, Uruguay</p>
+    <a href="#top" class="back-to-top mono">Volver arriba ↑</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
