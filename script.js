@@ -11,6 +11,7 @@
     navLinks.classList.remove("open");
     toggle.classList.remove("open");
     toggle.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
   }
 
   if (toggle && navLinks) {
@@ -18,38 +19,18 @@
       var isOpen = navLinks.classList.toggle("open");
       toggle.classList.toggle("open", isOpen);
       toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      document.body.style.overflow = isOpen ? "hidden" : "";
     });
 
     navLinks.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", closeMenu);
     });
-  }
 
-  /* ---------- Header: hidden over the hero, appears once scrolled past it ---------- */
-  var header = document.getElementById("site-header");
-  var heroSection = document.querySelector(".hero");
-
-  if (header && heroSection) {
-    var ticking = false;
-
-    function updateHeaderVisibility() {
-      var heroBottom = heroSection.getBoundingClientRect().bottom;
-      header.classList.toggle("visible", heroBottom <= 0);
-      ticking = false;
-    }
-
-    window.addEventListener(
-      "scroll",
-      function () {
-        if (!ticking) {
-          requestAnimationFrame(updateHeaderVisibility);
-          ticking = true;
-        }
-      },
-      { passive: true }
-    );
-    window.addEventListener("resize", updateHeaderVisibility, { passive: true });
-    updateHeaderVisibility();
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 760 && navLinks.classList.contains("open")) {
+        closeMenu();
+      }
+    });
   }
 
   /* ---------- Active nav link on scroll (position-based, works reliably both ways) ---------- */
@@ -120,7 +101,7 @@
     heroImg.classList.add("ken-burns");
   }
 
-  /* ---------- Contact form (no backend — friendly confirmation) ---------- */
+  /* ---------- Contact form (real submission via Formspree) ---------- */
   var form = document.getElementById("contact-form");
   var note = document.getElementById("form-note");
 
@@ -138,11 +119,33 @@
         return;
       }
 
-      // No backend connected yet — replace this block with a real submission
-      // (e.g. fetch() to your email service or form endpoint) when ready.
-      note.textContent = "¡Gracias! Formulario de ejemplo — conectá un servicio de envío de emails para recibir estas consultas.";
+      var submitBtn = form.querySelector("button[type=submit]");
+      if (submitBtn) submitBtn.disabled = true;
+      note.textContent = "Enviando...";
       note.style.color = "";
-      form.reset();
+
+      fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" }
+      })
+        .then(function (response) {
+          if (response.ok) {
+            note.textContent = "¡Gracias! Recibimos tu consulta, te vamos a contactar a la brevedad.";
+            note.style.color = "";
+            form.reset();
+          } else {
+            note.textContent = "No pudimos enviar tu consulta. Probá de nuevo o escribinos directo a eduardo@syfconstrucciones.com.";
+            note.style.color = "#f2b8b8";
+          }
+        })
+        .catch(function () {
+          note.textContent = "No pudimos enviar tu consulta. Probá de nuevo o escribinos directo a eduardo@syfconstrucciones.com.";
+          note.style.color = "#f2b8b8";
+        })
+        .finally(function () {
+          if (submitBtn) submitBtn.disabled = false;
+        });
     });
   }
 
