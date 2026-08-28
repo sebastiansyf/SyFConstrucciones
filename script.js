@@ -203,4 +203,21 @@
       if (e.key === "ArrowRight") openLightbox(currentIndex + 1);
     });
   }
+
+  /* ---------- Keep hero's top spacing in sync with the real header height ---------- */
+  var siteHeader = document.getElementById("site-header");
+
+  if (siteHeader) {
+    function syncHeaderHeight() {
+      var h = siteHeader.getBoundingClientRect().height;
+      document.documentElement.style.setProperty("--header-h", h + "px");
+    }
+
+    syncHeaderHeight();
+    window.addEventListener("resize", syncHeaderHeight, { passive: true });
+
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(syncHeaderHeight);
+    }
+  }
 })();
